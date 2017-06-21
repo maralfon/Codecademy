@@ -1,0 +1,7 @@
+SELECT * 
+  FROM movies
+    WHERE name LIKE 'a%';
+    
+SELECT * 
+  FROM movies
+    WHERE name LIKE '%man%';

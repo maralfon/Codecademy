@@ -1,0 +1,123 @@
+/* Step 1 */
+SELECT DISTINCT year
+  FROM movies;
+  
+/* Step 2 */
+SELECT DISTINCT year
+  FROM movies
+    ORDER BY year ASC;
+
+/* Step 3 */
+SELECT *
+  FROM movies
+    WHERE genre = 'drama';
+
+/* Step 4 */
+SELECT *
+  FROM movies
+    WHERE name LIKE '%bride%';
+
+/* Step 5 */
+SELECT *
+  FROM movies
+    WHERE year BETWEEN 2000 AND 2015;
+
+/* Step 6 */
+SELECT *
+  FROM movies
+    WHERE year = 1995 OR imdb_rating = 9;
+
+/* Step 7 */
+SELECT name, imdb_rating
+  FROM movies
+    WHERE year > 2009
+      ORDER BY name ASC;
+
+/* Step 8 */
+SELECT *
+  FROM movies
+    WHERE imdb_rating = 7
+      LIMIT 3;
+
+/* Step 9 */
+SELECT *
+  FROM movies
+    WHERE imdb_rating > 6 AND year > 1995
+    AND genre = 'comedy'
+      ORDER BY imdb_rating DESC
+        LIMIT 10;
+
+/* Step 10 */
+SELECT *
+  FROM movies
+    WHERE name = 'Cast Away';
+
+/* Step 11 */
+SELECT *
+  FROM movies
+    WHERE imdb_rating != 7;
+
+/* Step 12 */
+SELECT *
+  FROM movies
+    WHERE genre = 'horror' 
+    AND imdb_rating < 6;
+
+/* Step 13 */
+SELECT *
+  FROM movies
+    WHERE imdb_rating > 8
+      ORDER BY genre
+        LIMIT 10;
+
+/* Step 14 */
+SELECT *
+  FROM movies
+    WHERE name LIKE '%king%';
+
+/* Step 15 */
+SELECT *
+  FROM movies
+    WHERE name LIKE '%out';
+
+/* Step 16 */
+SELECT *
+  FROM movies
+    WHERE name LIKE 'The%'
+      ORDER BY imdb_rating DESC;
+
+/* Step 17 */
+SELECT *
+  FROM movies;
+
+/* Step 18 */
+SELECT name, id
+  FROM movies
+    WHERE id > 125;
+
+/* Step 19 */
+SELECT *
+  FROM movies
+    WHERE name LIKE 'X-Men%';
+
+/* Step 20 */
+SELECT *
+  FROM movies
+    WHERE id < 11
+      ORDER BY name DESC;
+
+/* Step 21 */
+SELECT id, name, genre
+  FROM movies
+    WHERE genre = 'romance';
+
+/* Step 22 */
+SELECT *
+  FROM movies
+    WHERE name LIKE '%Twilight%'
+      ORDER BY year ASC;
+
+/* Step 23 */
+SELECT *
+  FROM movies
+    WHERE year = 2012 AND genre = 'comedy';

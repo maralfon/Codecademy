@@ -1,0 +1,7 @@
+SELECT * 
+  FROM movies
+    WHERE name BETWEEN 'A' AND 'J';
+    
+SELECT * 
+  FROM movies
+    WHERE year BETWEEN 1990 AND 2000;
