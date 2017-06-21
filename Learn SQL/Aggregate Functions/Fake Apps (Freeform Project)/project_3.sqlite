@@ -1,0 +1,100 @@
+/*Step 1*/
+SELECT COUNT(*)
+  FROM fake_apps;
+
+/*Step 2*/
+SELECT name, category, MIN(downloads)
+  FROM fake_apps;
+
+/*Step 3*/
+SELECT COUNT(*)
+  FROM fake_apps
+    GROUP BY category;
+
+/*Step 4*/
+SELECT name, category
+  FROM fake_apps
+    WHERE downloads = 
+      (SELECT MAX(downloads)
+         FROM fake_apps);
+
+/*Step 5*/
+SELECT name, category
+  FROM fake_apps
+    WHERE downloads =
+      (SELECT MIN(downloads)
+         FROM fake_apps);
+  
+/*Step 6*/
+SELECT category, AVG(price)
+  FROM fake_apps
+    GROUP BY category;
+  
+/*Step 7*/
+SELECT category, Round(AVG(price), 2)
+  FROM fake_apps
+    GROUP BY category;
+  
+/*Step 8*/
+SELECT MAX(price)
+  FROM fake_apps;
+
+/*Step 9*/
+SELECT MIN(downloads)
+  FROM fake_apps;
+
+/*Step 10*/
+SELECT SUM(downloads)
+  FROM fake_apps
+    WHERE category = 'Games';
+
+/*Step 11*/
+SELECT COUNT(*)
+  FROM fake_apps
+    WHERE price = 0;
+  
+/*Step 12*/
+SELECT COUNT(*)
+  FROM fake_apps
+    WHERE price = 14.99;
+  
+/*Step 13*/
+SELECT SUM(downloads)
+  FROM fake_apps
+    WHERE category = 'Music';
+  
+/*Step 14*/
+SELECT SUM(downloads)
+  FROM fake_apps
+    WHERE category = 'Business';
+  
+/*Step 15*/
+SELECT category, COUNT(*)
+  FROM fake_apps	
+    GROUP BY category;
+  
+/*Step 16*/
+SELECT price, AVG(downloads)
+  FROM fake_apps
+    GROUP BY price;
+  
+/*Step 17*/
+SELECT price, ROUND(AVG(downloads))
+  FROM fake_apps
+    GROUP BY price;
+  
+/*Step 18*/
+SELECT name, category, MAX(price)
+  FROM fake_apps
+    GROUP BY category;
+
+/*Step 19*/
+SELECT COUNT(*)
+  FROM fake_apps
+    WHERE name LIKE 'A%';
+  
+/*Step 20*/
+SELECT SUM(downloads)
+  FROM fake_apps
+    WHERE category = 'Sports'
+    OR category = 'Health & Fitness';

@@ -1,0 +1,6 @@
+SELECT name, category, MIN(downloads)
+  FROM fake_apps
+    GROUP BY category;
+
+SELECT AVG(downloads)
+  FROM fake_apps;
