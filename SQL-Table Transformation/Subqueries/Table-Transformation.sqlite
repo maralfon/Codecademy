@@ -1,0 +1,3 @@
+SELECT *
+  FROM flights
+    LIMIT 10;
