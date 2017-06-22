@@ -1,0 +1,37 @@
+/*Step 1*/
+CREATE TABLE tracks (
+	id INTEGER PRIMARY KEY,
+	title TEXT,
+	album_id INTEGER
+);
+
+/*Step 2*/
+INSERT INTO tracks (id, title, album_id)
+  VALUES (1, 'Smooth Criminal', 8);
+
+/*Step 3*/
+INSERT INTO tracks (id, title, album_id)
+  VALUES (2, 'Thriller', 12);
+
+INSERT INTO tracks (id, title, album_id)
+  VALUES (3, 'Blue Suede Shoes', 2);
+
+INSERT INTO tracks (id, title, album_id)
+  VALUES (4, 'Hey Jude', 5);
+
+/*Step 4*/
+SELECT *
+  FROM albums, tracks
+    ORDER BY album_id;
+
+/*Step 5*/
+SELECT *
+  FROM albums LEFT OUTER JOIN artists;
+  
+/*Step 6*/
+SELECT *
+  FROM artists LEFT OUTER JOIN albums;
+
+/*Step 7*/
+SELECT albums.id, albums.name, albums.artist_id, albums.year, tracks.id, tracks.title, tracks.album_id AS 'Albums'
+  FROM albums, tracks;

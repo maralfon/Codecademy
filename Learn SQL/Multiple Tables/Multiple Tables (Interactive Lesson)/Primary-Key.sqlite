@@ -1,0 +1,13 @@
+SELECT *
+  FROM albums;
+
+SELECT *
+  FROM artists;
+
+SELECT *
+  FROM artists
+    WHERE id = 3;
+
+SELECT *
+  FROM albums
+    WHERE artist_id = 3;

@@ -1,0 +1,2 @@
+SELECT albums.name, albums.year, artists.name
+  FROM albums, artists;
